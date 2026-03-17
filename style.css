@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Great+Vibes&display=swap');
+
+body {
+  margin:0;
+  overflow:hidden;
+  font-family:'Cinzel', serif;
+}
+
+/* Background Family Photo */
+.background {
+  position:absolute; top:0; left:0; width:100%; height:100%; z-index:0;
+}
+
+.family-bg {
+  position:absolute; top:0; left:0; width:100%; height:100%;
+  object-fit: cover;
+  filter: brightness(0.6); /* supaya teks & fireworks jelas */
+}
+
+/* Card container */
+#card {
+  position:absolute;
+  top:50%; left:50%;
+  transform:translate(-50%, -50%);
+  text-align:center;
+  z-index:2;
+  background: rgba(0,0,0,0.4);
+  padding:40px;
+  border-radius:25px;
+  box-shadow:0 0 50px rgba(0,255,0,0.6);
+}
+
+/* Nama dengan shimmer + glow */
+#nama {
+  font-family:'Great Vibes', cursive;
+  font-size:3em;
+  color:#00ff00;
+  text-shadow:0 0 15px #00ff00,0 0 25px #00ff00;
+  animation: shimmer 2s infinite linear;
+}
+
+@keyframes shimmer {
+  0%{text-shadow:0 0 15px #00ff00,0 0 25px #00ff00;}
+  50%{text-shadow:0 0 25px #ccffcc,0 0 35px #ccffcc;}
+  100%{text-shadow:0 0 15px #00ff00,0 0 25px #00ff00;}
+}
+
+/* Typing effect */
+#typing {
+  margin-top:20px;
+  font-size:1.3em;
+  line-height:1.6em;
+  color:#ccffcc;
+  white-space: pre-line;
+  border-right: 2px solid #00ff00;
+  display:inline-block;
+  animation: blink 0.7s step-end infinite;
+}
+
+@keyframes blink { 50% { border-color: transparent; } }
+
+/* Canvas fireworks */
+canvas { position:absolute; top:0; left:0; z-index:1; }
+
+/* Confetti ketupat */
+.ketupat {
+  position:absolute;
+  font-size:24px;
+  animation-name:fall;
+  animation-timing-function:linear;
+}
+
+@keyframes fall { 0%{transform:translateY(0) rotate(0deg);} 100%{transform:translateY(100vh) rotate(360deg);} }
+
+/* Buttons */
+button {
+  margin-top:20px;
+  padding:12px 25px;
+  border:none;
+  border-radius:12px;
+  background:#00ff00;
+  color:#000;
+  font-weight:bold;
+  cursor:pointer;
+}

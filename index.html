@@ -1,0 +1,28 @@
+<html lang="ms">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>سلامت هاري راي</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/three@0.155.0/build/three.min.js"></script>
+</head>
+<body>
+
+<div class="background">
+  <img src="asset/family_bg.jpg" alt="Family Background" class="family-bg">
+</div>
+
+<div id="card">
+  <div id="nama"></div>
+  <div id="typing"></div>
+  <button onclick="share()">Share WhatsApp</button>
+  <button id="audioBtn">🔊 Play / Mute</button>
+</div>
+
+<!-- Audio Selamat Hari Raya -->
+<audio id="audio" src="audio/selamat_hari_raya.mp3" autoplay loop></audio>
+
+<canvas id="scene3d"></canvas>
+
+<script src="script.js"></script>
+</body>
